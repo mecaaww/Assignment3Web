@@ -282,40 +282,85 @@ body {
   font-size: 15px;
 }
 
-/* PRINT MODE */
-/* PRINT MODE */
-@media print {
-
-  /* SET KERTAS A4 */
-  @page {
-    size: A4;
-    margin: 0;
-  }
+/* =============== RESPONSIVE MODE (HP / TABLET) =============== */
+@media (max-width: 768px) {
 
   body {
-    margin: 0;
-    padding: 0;
+    background: #fff5fa;
+    padding: 10px;
   }
 
   .page {
-    width: auto;
-    height: 100%;
-    transform: scale(100%); /* SUPAYA MUAT 1 LEMBAR */
-    transform-origin: top left;
-    margin: 0;
-    padding: 0;
-    box-shadow: none;
-    border-radius: 0;
+    flex-direction: column;
+    width: 100%;
+    min-height: auto;
+    border-radius: 20px;
+    margin: 20px auto;
   }
 
-  /* Hilangkan tombol */
+  /* KIRI & KANAN jadi 1 kolom */
+  .left, .right {
+    width: 100%;
+    padding: 25px 20px;
+  }
+
+  /* Foto center & tidak kepotong */
+  .photo-circle {
+    width: 150px;
+    height: 150px;
+  }
+
+  /* Biarkan box full width */
+  .box {
+    margin-bottom: 20px;
+  }
+
+  /* Header */
+  .header h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .sub {
+    text-align: center;
+    font-size: 13px;
+  }
+
+  /* Summary */
+  .summary {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: justify;
+  }
+
+  /* Timeline pendidikan */
+  .timeline {
+    gap: 10px;
+  }
+
+  /* Pengalaman timeline */
+  .exp-row {
+    gap: 12px;
+  }
+
+  /* Skill tag biar tidak terlalu besar */
+  .skills-tag span {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+
+  /* Hobi lebih kecil */
+  .hobi {
+    font-size: 14px;
+  }
+
+  /* Print button agar center */
   .print-btn {
-    display: none;
-  }
-
-  /* Pastikan background TETAP MUNCUL */
-  * {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
+    width: 100%;
+    font-size: 14px;
+    padding: 12px;
+    margin-top: 20px;
   }
 }
+
+
