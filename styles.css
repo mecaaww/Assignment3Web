@@ -53,6 +53,14 @@ body {
   object-fit: cover;
 }
 
+.iconify {
+  font-size: 18px;
+  color: #d6336c;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+
 /* BOX */
 .box {
   background: white;
@@ -209,8 +217,15 @@ body {
   color: white;
   border: none;
   border-radius: 6px;
-  font-size: 13px;
+  font-size: 14px;
   cursor: pointer;
+  transition: 0.3ms ease;
+}
+
+.print-btn:hover {
+  background: #f987af;
+  color: white;
+  transform: scale(105%);
 }
 
 /* EXPERIENCE TIMELINE */
