@@ -2,28 +2,30 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  background: #ffe5ec;
+  background: #fff5fa;
 }
 
-/* HALAMAN */
+/* WRAPPER */
 .page {
   width: 900px;
-  min-height: 1000px;
   background: #ffffff;
-  margin: 30px auto;
+  min-height: 1100px;
+  margin: 40px auto;
   display: flex;
-  border: 8px solid #ff8fab;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 }
 
-/* KIRI */
+/* ================= LEFT ================= */
 .left {
   width: 35%;
-  background: #fff6fa;
-  padding: 30px 25px;
+  background: #ffe1eb;
+  padding: 30px 22px;
 }
 
 /* FOTO */
@@ -34,35 +36,36 @@ body {
 }
 
 .photo-circle {
-  width: 180px;
-  height: 180px;
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
   background: #d6336c;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 6px;
 }
 
 .photo {
-  width: 150px;
-  height: 150px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #ffffff;
 }
 
 /* BOX */
 .box {
-  background: #ffffff;
-  padding: 18px 16px;
-  margin-bottom: 20px;
+  background: white;
+  padding: 18px;
+  margin-bottom: 22px;
+  border-radius: 18px;
   border-left: 6px solid #ffb3c6;
 }
 
 .box h2 {
-  font-size: 15px;
-  letter-spacing: 2px;
   color: #d6336c;
+  font-size: 14px;
+  letter-spacing: 2px;
   margin-bottom: 10px;
 }
 
@@ -74,127 +77,230 @@ body {
 /* TIMELINE */
 .timeline {
   display: flex;
-  margin-bottom: 14px;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.tl-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .dot {
-  width: 8px;
-  height: 8px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
-  background: #d6336c;
-  margin-top: 4px;
-  margin-right: 10px;
+  border: 2px solid #d6336c;
+  background: white;
 }
 
-.timeline-content .year {
-  font-size: 12px;
-  color: #555;
+.line {
+  width: 2px;
+  background: #d6336c;
+  flex: 1;
+  margin-top: 4px;
+  border-radius: 2px;
+}
+
+.tl-content .year {
+  font-size: 13px;
+  color: #666;
 }
 
 .bold {
   font-weight: 600;
+  margin-top: 3px;
 }
 
-/* SKILLS PILL STYLE FULL WIDTH */
+/* SKILL TAGS */
 .skills-tag {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 8px;
 }
 
 .skills-tag span {
-  padding: 6px 15px;
+  padding: 6px 12px;
   background: #ffe2ec;
   color: #d6336c;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 500;
   border: 1px solid #ffb3c6;
+  font-size: 12px;
+  border-radius: 30px;
+  transition: 0.25s;
+  cursor: default;
 }
 
 .skills-tag span:hover {
-  background: #ffd6e3;
+  background: #d6336c;
+  color: white;
+  transform: scale(1.15);
 }
 
-/* KANAN */
+/* ================= RIGHT ================= */
 .right {
   width: 65%;
-  padding: 30px 35px;
+  padding: 38px 40px;
 }
 
 .header h1 {
   font-size: 28px;
   color: #d6336c;
+  font-weight: 600;
 }
 
 .sub {
-  letter-spacing: 1px;
-  font-size: 12px;
-  color: #7f8c8d;
-  margin-top: 4px;
+  color: #777;
+  font-size: 14px;
+  margin-top: 6px;
 }
 
 .summary {
-  margin-top: 25px;
-  margin-bottom: 25px;
-  font-size: 13px;
-  line-height: 1.6;
+  margin: 22px 0 30px;
   color: #555;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: justify;
 }
 
-/* SECTION */
 .section {
-  margin-bottom: 25px;
+  margin-top: 15px;
 }
 
+/* SECTION TITLE */
 .section h2 {
-  display: inline-block;
   background: #d6336c;
   color: white;
-  padding: 8px 16px;
-  font-size: 14px;
+  padding: 7px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  display: inline-block;
   letter-spacing: 1px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
+/* EXPERIENCE */
 .exp-item {
-  margin-top: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 18px;
 }
 
 .exp-item .year {
-  font-size: 12px;
+  font-size: 15px;
   color: #888;
 }
 
 .exp-item ul {
-  margin-left: 18px;
+  margin-left: 20px;
   font-size: 13px;
+  margin-top: 6px;
 }
 
-/* HOBI */
 .section ul li {
-  margin-left: 18px;
-  font-size: 13px;
+  margin-left: 20px;
+  font-size: 14px;
   margin-bottom: 4px;
 }
 
 /* PRINT BUTTON */
 .print-btn {
   margin-top: 15px;
-  padding: 8px 16px;
-  border: none;
+  padding: 9px 18px;
   background: #d6336c;
-  color: #fff;
-  border-radius: 4px;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
   cursor: pointer;
+}
+
+/* EXPERIENCE TIMELINE */
+.exp-timeline {
+  margin-top: 10px;
+}
+
+.exp-row {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.exp-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.exp-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #d6336c;
+  background: #fff;
+}
+
+.exp-line {
+  width: 2px;
+  background: #d6336c;
+  flex: 1;
+  margin-top: 4px;
+}
+
+.exp-line-last {
+  width: 2px;
+  background: #d6336c00; /* transparan di akhir */
+  flex: 1;
+  margin-top: 4px;
+}
+
+.exp-content .year {
+  font-size: 14px;
+  color: #777;
+}
+
+.exp-content ul {
+  margin-left: 20px;
+  margin-top: 6px;
   font-size: 13px;
 }
 
+.hobi {
+  font-size: 15px;
+}
+
+/* PRINT MODE */
 /* PRINT MODE */
 @media print {
-  body { background: #ffffff; }
-  .page { margin: 0; border: none; width: 100%; }
-  .print-btn { display: none; }
+
+  /* SET KERTAS A4 */
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .page {
+    width: auto;
+    height: 100%;
+    transform: scale(100%); /* SUPAYA MUAT 1 LEMBAR */
+    transform-origin: top left;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  /* Hilangkan tombol */
+  .print-btn {
+    display: none;
+  }
+
+  /* Pastikan background TETAP MUNCUL */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
 }
